@@ -3,8 +3,8 @@ package m5_output_input;
 import java.io.File;
 import java.io.IOException;
 
-public class Lec_5_1 {
-    public static void main(String[] args) {
+public class Lec_5_1_file {
+    public void workWithFile() {
 
         File winExample = new File("C:\\doc\\someFile.txt");
 
@@ -53,5 +53,30 @@ public class Lec_5_1 {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        File file3 = new File("/usr/bin/java");
+        file3.exists();
+        file3.isFile();
+        file3.length();
+        file3.lastModified();
+        if (file3.isDirectory()) {
+            file3.list();
+            file3.listFiles();
+        }
+
+        File[] javaSourceFiles = file3.listFiles(
+            f -> f.getName().endsWith(".java"));
+
+        try {
+            boolean success = file.createNewFile();
+        } catch (IOException e) {
+            // handle error
+        }
+
+        File dir = new File("a/d/b/");
+        boolean success2 = dir.mkdir(); // создает 1 уровень вложенности
+        boolean success3 = dir.mkdirs(); // создает все уровни вложенности
+        boolean success4 = dir.delete(); // не удаляет вложенные директории
+        boolean success5 = dir.renameTo(file);
     }
 }
