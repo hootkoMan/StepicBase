@@ -13,7 +13,7 @@ import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class Lec_6_3_stream {
+public class Lec_6_4_stream {
     public void someMethod() {
         int sum = IntStream.iterate(1, n -> n + 1)
             .filter(n -> n % 5 == 0 && n % 2 != 0)
@@ -52,7 +52,5 @@ public class Lec_6_3_stream {
         IntStream arrayStream = Arrays.stream(array);
 
         IntStream streamElements = IntStream.of(2, 3, 4, 5, 6);
-
     }
-
 }
