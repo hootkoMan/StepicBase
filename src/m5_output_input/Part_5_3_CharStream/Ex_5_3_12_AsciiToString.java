@@ -1,4 +1,4 @@
-package m5_output_input;
+package m5_output_input.Part_5_3_CharStream;
 
 import java.io.*;
 import java.nio.charset.Charset;

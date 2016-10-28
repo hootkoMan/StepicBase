@@ -1,4 +1,4 @@
-package m5_output_input;
+package m5_output_input.Part_5_2_ByteStream;
 
 
 import java.io.*;
